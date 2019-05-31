@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "mocha",
+    "postInstall": "node ./postInstall"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -11,6 +13,13 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "knex": "^0.17.1",
+    "morgan": "~1.9.1",
+    "mysql": "^2.17.1",
+    "sqlite3": "^4.0.8"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
   }
 }
