@@ -25,7 +25,7 @@ router.get('/list', async function (req, res, next) {
   });
 })
 router.get('/env', function(req, res, next) {
-  res.render('index', {
+  res.render('env', {
     title: 'Express',
     env: process.env
   });
