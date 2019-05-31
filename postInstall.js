@@ -1,6 +1,7 @@
-var db = require('../db');
+var db = require('./db');
 
 (async function setup() {
+  var knex = db.getKnex();
   try { await knex.schema.dropTableIfExists('data'); } catch (e) {}
   await knex.schema.createTable('data', t => {
     t.increments();
@@ -9,4 +10,5 @@ var db = require('../db');
   await knex('data').insert({
     item: 'Lorem ipsum deserunt in nulla.'
   });
+  await knex.destroy();
 })().then(() => console.log('done'));
