@@ -8,6 +8,9 @@
     "cleardb:ignite"
   ],
   "env": {
-    "HEROKU": true
+    "HEROKU": {
+      "description": "set to 1",
+      "value": "1"
+    }
   }
 }
